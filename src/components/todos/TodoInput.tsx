@@ -9,6 +9,7 @@ export default function TodoInput() {
   const [taskName, setTaskName] = useState('');
   const handleClick = () => {
     todoCtx?.addNewTodo(taskName);
+    setTaskName('');
   };
   const handleChange: ChangeEventHandler<HTMLTextAreaElement> = (event) => {
     setTaskName(event.currentTarget.value);
